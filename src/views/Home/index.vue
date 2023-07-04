@@ -27,6 +27,14 @@ function getObjectKey(obj: any, value: string) {
   return Object.keys(obj).find((key) => obj[key] === value);
 }
 
+const convertFileUrl = (prop: Blob | MediaSource): string => {
+  if (!prop) {
+    return "";
+  }
+  let src = URL.createObjectURL(prop);
+  return src;
+};
+
 const handleFilterDistricts = (key: string, arr: any[]) => {
   const city = getObjectKey(REGIONS, key);
   console.log(city);
@@ -65,6 +73,10 @@ const handleChange = (id: any, event: any) => {
           }
           break;
 
+        case "file":
+          field["value"] = convertFileUrl(event.target.files[0]);
+          break;
+
         default:
           field["value"] = event.target.value;
           break;
@@ -88,11 +100,7 @@ provide("handleChange", {
   <div class="wrapper d-flex align-items-center">
     <div class="container border p-3 shadow">
       <h1>{{ page_label }}</h1>
-      <form
-        class=""
-        @submit.prevent="submit"
-        v-if="fields && fields.length > 0"
-      >
+      <form @submit.prevent="submit" v-if="fields && fields.length > 0">
         <Element v-for="field in fields" :field="field" />
         <button
           class="btn btn-lg btn-primary mt-3"
@@ -126,6 +134,7 @@ provide("handleChange", {
             <div class="modal-body">
               <p v-for="item in fields">
                 {{ [item.field_id] + ": " + item.value }}
+                <img v-if="item.type === 'file'" :src="item.value" alt="" />
               </p>
             </div>
             <div class="modal-footer">
@@ -153,6 +162,9 @@ provide("handleChange", {
 
 <style lang="scss" scoped>
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
+  img {
+    width: 100%;
+  }
 }
 </style>

@@ -19,6 +19,14 @@
         "value": ""
       },
       {
+        "field_id": "file",
+        "label": "load image",
+        "mandatory": "yes",
+        "placeholder": "Enter email",
+        "type": "file",
+        "value": ""
+      },
+      {
         "field_id": "region",
         "label": "Select Region",
         "value": "---",

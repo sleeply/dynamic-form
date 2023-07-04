@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Checkbox from "./Checkbox.vue";
+import FileInput from "./FileInput.vue";
 import Input from "./Input.vue";
 import Radio from "./Radio.vue";
 import Select from "./Select.vue";
@@ -17,6 +18,13 @@ defineProps<IProps>();
     <Input
       class="mt-3"
       v-if="field.type === 'text'"
+      :label="field.label"
+      :value="field.value"
+      :id="field.field_id"
+    />
+    <FileInput
+      class="mt-3"
+      v-if="field.type === 'file'"
       :label="field.label"
       :value="field.value"
       :id="field.field_id"
@@ -40,7 +48,7 @@ defineProps<IProps>();
       :value="field.value"
       :id="field.field_id"
     />
-    <div class="d-flex mt-3">
+    <div class="d-flex mt-3" style="gap: 0.625rem">
       <Radio
         class="ml-3"
         v-for="radio in field.radio_buttons"
@@ -49,9 +57,8 @@ defineProps<IProps>();
         :id="field.field_id"
         :checked="radio.label === field.value"
       />
-
     </div>
-    
+
     <TextArea
       class="mt-3"
       v-if="field.type === 'textarea'"
