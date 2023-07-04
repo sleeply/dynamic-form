@@ -14,9 +14,10 @@ defineProps<IProps>();
 </script>
 
 <template>
-  <div >
-    <label for="input-element"> {{ label }} </label>
+  <div>
+    <label for="input-element" class="form-label"> {{ label }} </label>
     <textarea
+      class="form-control"
       @change="injection?.handleChange(id, $event)"
       :placeholder="placeholder"
       type="text"

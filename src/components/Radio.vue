@@ -7,7 +7,7 @@ interface IProps {
   label: string;
   placeholder?: string;
   value: string;
-  radioButtons: any[];
+  checked: boolean;
 }
 
 const injection = inject<IFormProvider>("handleChange");
@@ -15,16 +15,26 @@ defineProps<IProps>();
 </script>
 
 <template>
-  <div>
-    <label for="input-element"> {{ label }} </label>
+  <div class="form-check">
+    <label :for="id" class="form-check-label"> {{ label }} </label>
     <input
+      class="form-check-input"
+      type="radio"
+      name="radio"
+      :id="id"
+      :value="value"
+      :checked="checked"
+      @change="injection?.handleChange(id, $event)"
+    />
+    <!-- <input
+      class="form-check-input"
       v-for="radio in radioButtons"
       type="radio"
       id="exampleRadio1"
       :checked="radio.label === value"
       :value="radio.label"
       @change="injection?.handleChange(id, $event)"
-    />
+    /> -->
   </div>
 </template>
 

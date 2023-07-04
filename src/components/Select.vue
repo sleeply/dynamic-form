@@ -18,6 +18,7 @@ defineProps<IProps>();
   <div>
     <label for=""> {{ label }} </label>
     <select
+    class="form-select"
       @change="injection?.handleChange(id, $event)"
       aria-label="Default select example"
     >

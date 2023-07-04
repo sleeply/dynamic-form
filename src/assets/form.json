@@ -3,7 +3,7 @@
     "page_label": "Job Application Form",
     "fields": [
       {
-        "field_id": "english_name",
+        "field_id": "user_name",
         "label": "Name",
         "mandatory": "yes",
         "placeholder": "Enter name",
@@ -25,7 +25,7 @@
         "mandatory": "yes",
         "options": [
           {
-            "label":"---"
+            "label": "---"
           }
         ],
         "type": "select"
@@ -33,11 +33,11 @@
       {
         "field_id": "district",
         "label": "Select district",
-        "value": "Part-Time",
+        "value": "---",
         "mandatory": "yes",
         "options": [
           {
-            "label":"---"
+            "label": "---"
           }
         ],
         "type": "select"
@@ -64,7 +64,7 @@
       },
       {
         "field_id": "complaint",
-        "label": "",
+        "label": "complaint",
         "type": "textarea",
         "placeholder": "type your complaint",
         "value": ""
