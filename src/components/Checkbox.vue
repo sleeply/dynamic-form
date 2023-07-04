@@ -19,7 +19,6 @@ const injection = inject<IFormProvider>("handleChange");
     <label for="input-element"> {{ label }} </label>
     <input
       type="checkbox"
-      className="form-check-input"
       id="exampleCheck1"
       @change="injection?.handleChange(id, $event)"
     />

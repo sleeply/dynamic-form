@@ -20,7 +20,6 @@ defineProps<IProps>();
     <input
       v-for="radio in radioButtons"
       type="radio"
-      className="form-radio-input"
       id="exampleRadio1"
       :checked="radio.label === value"
       :value="radio.label"

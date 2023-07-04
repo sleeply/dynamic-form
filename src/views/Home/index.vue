@@ -84,7 +84,6 @@ provide("handleChange", {
 <template>
   <div>
     {{ page_label }}
-
     <form v-if="fields && fields.length > 0">
       <Element v-for="field in fields" :field="field" />
     </form>
