@@ -19,27 +19,28 @@
         "value": ""
       },
       {
-        "field_id": "employment",
-        "label": "Employment desired",
-        "value": "Part-Time",
+        "field_id": "region",
+        "label": "Select Region",
+        "value": "---",
         "mandatory": "yes",
         "options": [
           {
-            "label": "Full-Time"
-          },
-          {
-            "label": "Part-Time"
+            "label":"---"
           }
         ],
         "type": "select"
       },
       {
-        "field_id": "contact",
-        "label": "Contact No.",
+        "field_id": "district",
+        "label": "Select district",
+        "value": "Part-Time",
         "mandatory": "yes",
-        "placeholder": "Enter contact no.",
-        "type": "text",
-        "value": ""
+        "options": [
+          {
+            "label":"---"
+          }
+        ],
+        "type": "select"
       },
       {
         "field_id": "driving_license",
@@ -66,14 +67,6 @@
         "label": "",
         "type": "textarea",
         "placeholder": "type your complaint",
-        "value": ""
-      },
-      {
-        "field_id": "identity",
-        "label": "Driving License No.",
-        "mandatory": "yes",
-        "placeholder": "e.g. 012 345 678",
-        "type": "text",
         "value": ""
       }
     ]

@@ -22,7 +22,7 @@ defineProps<IProps>();
       className="form-select"
       aria-label="Default select example"
     >
-      <option>Open this select menu</option>
+      <!-- <option>---</option> -->
 
       <option v-for="option in options" :value="option.label">
         {{ option.label }}

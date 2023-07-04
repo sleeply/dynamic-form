@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Andijon",
+    "slug": "andijon",
+    "id": 1
+  },
+  {
+    "name": "Buxoro",
+    "slug": "bukhara",
+    "id": 2
+  },
+  {
+    "name": "Farg'ona",
+    "slug": "fergana",
+    "id": 3
+  },
+  {
+    "name": "Jizzax",
+    "slug": "jizzakh",
+    "id": 4
+  },
+  {
+    "name": "Xorazm",
+    "slug": "xorazm",
+    "id": 5
+  },
+  {
+    "name": "Namangan",
+    "slug": "namangan",
+    "id": 6
+  },
+  {
+    "name": "Navoiy",
+    "slug": "navoiy",
+    "id": 7
+  },
+  {
+    "name": "Qashqadaryo",
+    "slug": "qashqadaryo",
+    "id": 8
+  },
+  {
+    "name": "Samarqand",
+    "slug": "samarqand",
+    "id": 9
+  },
+
+  {
+    "name": "Sirdaryo",
+    "slug": "sirdaryo",
+    "id": 10
+  },
+  {
+    "name": "Surxondaryo",
+    "slug": "surxondaryo",
+    "id": 11
+  },
+
+  {
+    "name": "Tashkent",
+    "slug": "tashkent",
+    "id": 12
+  },
+  {
+    "name": "Karakalpakstan",
+    "slug": "karakalpakstan",
+    "id": 13
+  }
+]
